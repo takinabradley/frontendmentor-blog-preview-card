@@ -1,0 +1,97 @@
+/* DEFINITIONS */
+:root {
+  --yellow: hsl(47, 88%, 63%);
+  --yellow-shaded: hsl(47, 88%, 50%);
+  --white: hsl(0, 0%, 100%);
+  --grey: hsl(0, 0%, 50%);
+  --black: hsl(0, 0%, 7%);
+  --fs-regular: 1rem;
+  --fs-medium: 1.5rem;
+  --fw-light-bold: 500;
+  --fw-heavy-bold: 800;
+}
+
+/* GENERAL */
+@font-face {
+  font-family: "Figtree";
+  src: url(assets/fonts/Figtree-VariableFont_wght.ttf) format("truetype");
+}
+
+body, p, h1 {
+  margin: 0px;
+}
+
+/* BACKSPLASH */
+.full-height {
+  background-color: var(--yellow);
+  height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* PREVIEW CARD */
+.preview-card {
+  background-color: var(--white);
+  display: flex;
+  flex-direction: column;
+  border: 2px solid black;
+  border-radius: 20px;
+  padding: 1em;
+  gap: 1em;
+  width: clamp(300px, 30%, 500px);
+  font-family: "Figtree";
+  font-size: clamp(var(--fs-regular), 1vw, var(--fs-medium));
+  box-shadow: 8px 8px;
+  color: var(--black)
+}
+
+.preview-card > * {
+  flex: 1;
+}
+
+.preview-card__img {
+  width: 100%;
+  display: block;
+  border-radius: 10px;
+}
+
+.preview-card__publish-date {
+  font-weight: var(--fw-light-bold);
+}
+
+.preview-card__heading {
+  font-size: var(--fs-medium);
+  font-weight: var(--fw-heavy-bold);
+}
+.preview-card__summary {
+  color: var(--grey);
+}
+
+/* TAGS */
+.tags__tag {
+  background-color: var(--yellow);
+  padding: .5em;
+  display: inline-block;
+  font-weight: var(--fw-light-bold);
+}
+
+.tags__tag:hover {
+  background-color: var(--yellow-shaded);
+}
+
+/* PROFILE */
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+}
+
+.profile__avatar {
+  width: 2rem;
+}
+
+.profile__username {
+  font-weight: var(--fw-heavy-bold);
+}
